@@ -19,7 +19,7 @@ Server.errorHandler(function (err, req, res, next) {
  * as you would an express server
  */
 
-const app = Server.app
+const app = Server.app()
 const routes = Server.routes({
     dir_as_path: true
 })

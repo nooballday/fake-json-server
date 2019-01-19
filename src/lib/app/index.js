@@ -11,7 +11,7 @@ import { ErrorEvents as emitter } from "../plugin/errorHandler"
 
 env()
 
-const app = express()
+const app = config => express(config)
 let isErrorHanlder = false
 
 app.use(bodyParser.json())

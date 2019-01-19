@@ -95,3 +95,16 @@ const routes = Server.routes({
 })
 app.use('/api/v1', routes)
 ```
+
+#### Build
+To use the project in your production you need to build it
+`npm build`
+
+it will generate file `dist/` in project directory that contain the already compiled javascript source code.
+
+you can then run the code
+`node dist/index.js`
+
+or if you use [PM2](http://pm2.keymetrics.io/)
+
+`pm2 start dist/index.js`

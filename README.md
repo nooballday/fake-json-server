@@ -7,8 +7,11 @@ A skeleton that wrap [Express](https://expressjs.com/), provided you with more f
 
 ### How to start using exton
 `git clone https://github.com/nooballday/exton.git my-express-project` 
+
 `cd my-express-project`
+
 `npm install`
+
 `npm start:dev`
 
 ### Functionality

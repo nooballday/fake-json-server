@@ -39,7 +39,7 @@ app.listen(3002, () => {
 
 #### - Controller
 You dont need to register your controller manually to an express instance, this skeleton will do it for you, just create a file with `.controller.js` extension inside `src/controller` you will need to provided an object inside your file
-there are 4 supported method which is `GET`, `POST`, `EDIT`, `DELETE`
+there are 4 supported methods which are `GET`, `POST`, `EDIT`, `DELETE`
 
 ```javascript
 module.exports  = {

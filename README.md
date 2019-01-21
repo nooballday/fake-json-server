@@ -23,9 +23,10 @@ import { Server } from './lib'
 /**
  * app is an express instance,
  * while the routes is the controller, if you chose to create your own routes just add it to 'app'
- * as you would an express server
+ * as you would an express server,
+ * the configuration is also the same as the Express configuration
  */
-const app = Server.app
+const app = Server.app()
 const routes = Server.routes({
     dir_as_path: true
 })

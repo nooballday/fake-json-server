@@ -1,9 +1,9 @@
 {
   "name": "nextgen-spaj-express",
   "version": "1.0.0",
-  "description": "Web API for Prisma BRILife APp",
+  "description": "A Simple Mocking Server for your REST API",
   "main": "index.js",
-  "author": "Naufal, Ujang",
+  "author": "Naufal",
   "license": "MIT",
   "babel": {
     "presets": [
@@ -28,6 +28,7 @@
     "winston-daily-rotate-file": "^3.3.2"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "debug": "^4.1.1",
     "dotenv": "^6.1.0",
     "express": "^4.16.4",

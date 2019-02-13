@@ -48,13 +48,13 @@ emitter.on('onControllerError', params => {
     const res = params.res
     const next = params.next
 
-    debug.controller(`error at controller '${req.url}' ERRMESSAGE ${err}`)
+    debug.controller(`error at controller '${req.baseUrl}' ERRMESSAGE ${err}`)
 
     if (!res.headerSent) {
         if (!isErrorHanlder) {
             res.send({
                 status: 500,
-                url: process.env.DEBUG ? req.url : undefined,
+                url: process.env.DEBUG ? req.baseUrl : undefined,
                 message: process.env.DEBUG ? err.message : "Something went wrong!"
             })
         } else {

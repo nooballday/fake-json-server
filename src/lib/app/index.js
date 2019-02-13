@@ -11,9 +11,8 @@ import { ErrorEvents as emitter } from "../plugin/errorHandler"
 
 env()
 
-const exton = config => express(config)
+const app = express()
 
-const app = exton()
 let isErrorHanlder = false
 
 app.use(bodyParser.json())
@@ -67,7 +66,7 @@ emitter.on('onControllerError', params => {
 export {
     serveStatic,
     debug,
-    exton as app,
+    app,
     routes,
     errorHandler
 }

@@ -21,10 +21,10 @@ Server.errorHandler(function (err, req, res, next) {
 
 const app = Server.app
 const routes = Server.routes({
-    dir_as_path: true
+    dir_as_path: false
 })
 
-app.use('/api/v1', routes)
+app.use('/fake-server/v1', routes)
 
 app.listen(process.env.SERVER_PORT, () => {
     debug('server:init')(`server running at port : ${process.env.SERVER_PORT} at ${new Date()}`)

@@ -11,7 +11,7 @@ import { errorExceptionHandler } from '../plugin/errorHandler'
  * @param {function} error_handler override error handler if you have your own handler,
  *  a controller error handler will be priority rather than global error handler
  */
-function expressRoutes(config = { dir_as_path: true}) {
+function expressRoutes(config = { dir_as_path: true }) {
     const routes = Router()
     const routePath = path.join(__dirname, '..', '..', 'controller')
 
@@ -37,6 +37,9 @@ function expressRoutes(config = { dir_as_path: true}) {
                                 break
                             case 'DELETE':
                                 routes.delete(endPointPath, endPoint.middleware, errorExceptionHandler(endPoint.handler))
+                                break
+                            case 'USE':
+                                routes.use(endPointPath, endPoint.middleware, errorExceptionHandler(endPoint.handler))
                                 break
                             default:
                                 console.error('\x1b[31m%s\x1b[0m', `Undefined Request Method at ${file}/${controllerFile}`)
